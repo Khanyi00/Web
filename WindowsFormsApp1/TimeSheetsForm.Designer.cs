@@ -82,11 +82,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(507, 17);
+            this.label2.Location = new System.Drawing.Point(501, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Enter UserName:";
+            this.label2.Text = "Enter User Name:";
             // 
             // btnTimeslots
             // 
@@ -128,18 +128,18 @@
             // 
             // _txtUserName
             // 
-            this._txtUserName.Location = new System.Drawing.Point(598, 15);
+            this._txtUserName.Location = new System.Drawing.Point(598, 12);
             this._txtUserName.Name = "_txtUserName";
-            this._txtUserName.Size = new System.Drawing.Size(116, 20);
+            this._txtUserName.Size = new System.Drawing.Size(105, 20);
             this._txtUserName.TabIndex = 7;
             // 
             // btnUsers
             // 
-            this.btnUsers.Location = new System.Drawing.Point(720, 11);
+            this.btnUsers.Location = new System.Drawing.Point(709, 11);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(57, 23);
+            this.btnUsers.Size = new System.Drawing.Size(68, 23);
             this.btnUsers.TabIndex = 6;
-            this.btnUsers.Text = "ListUsers";
+            this.btnUsers.Text = "List Users";
             this.btnUsers.UseVisualStyleBackColor = true;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
@@ -147,22 +147,25 @@
             // 
             this._timeSheetsGrid.AllowUserToDeleteRows = false;
             this._timeSheetsGrid.AllowUserToOrderColumns = true;
+            this._timeSheetsGrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this._timeSheetsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this._timeSheetsGrid.Location = new System.Drawing.Point(15, 53);
+            this._timeSheetsGrid.GridColor = System.Drawing.SystemColors.MenuHighlight;
+            this._timeSheetsGrid.Location = new System.Drawing.Point(8, 43);
             this._timeSheetsGrid.Name = "_timeSheetsGrid";
             this._timeSheetsGrid.ReadOnly = true;
-            this._timeSheetsGrid.Size = new System.Drawing.Size(874, 385);
+            this._timeSheetsGrid.Size = new System.Drawing.Size(882, 406);
             this._timeSheetsGrid.TabIndex = 4;
             // 
             // TimeSheetsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 449);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(900, 449);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this._timeSheetsGrid);
             this.Name = "TimeSheetsForm";
-            this.Text = "Form1";
+            this.Text = "Time Sheet";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._timeSheetsGrid)).EndInit();

@@ -26,33 +26,26 @@ namespace WindowsFormsApp1
             {
                 _yearComboBox.Items.Add((currentYear - i).ToString());
             }
+            _yearComboBox.SelectedIndex = 0;
+        }
+
+        public DateTime getDate()
+        {
+            var year = _yearComboBox.Text;
+            var month = _monthComboBox.Text;
+            DateTime date = DateTime.Parse($"{year}-{month}");
+            return date;
         }
 
         private void btnHoursPerPerson_Click(object sender, EventArgs e)
         {
-            var year = _yearComboBox.Text;
-            var month = _monthComboBox.Text;
-
-            if ( year == "" || month == "")
-            {
-                MessageBox.Show("Enter Date.");
-                return;
-            }
-
-            DateTime date = DateTime.Parse($"{year}-{month}");
+            var date = getDate();
             _timeSheetsGrid.DataSource = DataDB.GetTotalHoursPerPerson(date);
         }
 
         private void btnHoursPerProject_Click(object sender, EventArgs e)
         {
-            var year = _yearComboBox.Text;
-            var month = _monthComboBox.Text;
-            if ( year == "" || month == "")
-            {
-                MessageBox.Show("Enter Date.");
-                return;
-            }
-            DateTime date = DateTime.Parse($"{year}-{month}");
+            var date = getDate();
             _timeSheetsGrid.DataSource = DataDB.GetTotalHoursPerProject(date);
         }
 
@@ -72,16 +65,14 @@ namespace WindowsFormsApp1
         private void btnTimeslots_Click(object sender, EventArgs e)
         {
             var userName = _txtUserName.Text;
-            var year = _yearComboBox.Text;
-            var month = _monthComboBox.Text;
+            var date = getDate();
 
-            if (userName == "" || year == "" || month == "")
+            if (userName == "")
             {
-                MessageBox.Show("Enter UserName or Date.");
+                MessageBox.Show("Enter UserName.");
                 return;
             }
 
-            DateTime date = DateTime.Parse($"{year}-{month}");
             _timeSheetsGrid.DataSource = DataDB.GetFullTimeSlots(userName, date);
         }
     }

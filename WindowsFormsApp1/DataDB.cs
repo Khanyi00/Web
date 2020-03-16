@@ -62,9 +62,11 @@ namespace WindowsFormsApp1
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                string query = "select Timeslots.TimeslotId, Timeslots.ProjectId, Timeslots.Date,Timeslots.HoursCaptured,  Users.Username " +
-                               " from Timeslots INNER JOIN Users  ON Timeslots.UserId = Users.UserId "+
-                               "where Username like Concat('%',@userName,'%') and MONTH(Date)=  @month AND YEAR(Date) = @year order by Users.Username";
+
+                string query = "select  Timeslots.TimeslotId, Timeslots.ProjectId, Timeslots.Date,Timeslots.HoursCaptured,Users.UserId, Users.Username " +
+                    " from Timeslots INNER JOIN Users  ON Timeslots.UserId = Users.UserId" +
+                    " where Timeslots.UserId IN " +
+                    "(select top 1 UserId from Users where Username like Concat('%',@userName,'%') and MONTH(Date)=  @month AND YEAR(Date) = @year) ";
                 return db.Query<Timeslots>(query, new { userName, month, year }).ToList();
             }
         }

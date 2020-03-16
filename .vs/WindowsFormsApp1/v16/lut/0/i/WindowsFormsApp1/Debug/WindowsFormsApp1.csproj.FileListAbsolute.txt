@@ -1,0 +1,12 @@
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\b\NUnit3.TestAdapter.dll
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\b\NUnit3.TestAdapter.pdb
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\b\nunit.engine.dll
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\b\nunit.engine.api.dll
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\b\WindowsFormsApp1.exe.config
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\b\WindowsFormsApp1.exe
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\i\WindowsFormsApp1\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\i\WindowsFormsApp1\Debug\WindowsFormsApp1.TimeSheetsForm.resources
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\i\WindowsFormsApp1\Debug\WindowsFormsApp1.Properties.Resources.resources
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\i\WindowsFormsApp1\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\i\WindowsFormsApp1\Debug\WindowsFormsApp1.csproj.CopyComplete
+G:\WindowsFormsApp1\.vs\WindowsFormsApp1\v16\lut\0\i\WindowsFormsApp1\Debug\WindowsFormsApp1.exe
