@@ -14,7 +14,25 @@ namespace WindowsFormsApp1.Tests
     {
         private readonly IDbConnection _db = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
 
-      
+
+        [Test]
+        public void GetDatabaseName_withConnectionstring_ShouldReturnDatabaseName()
+        {
+            //arrange
+            if (_db.State == ConnectionState.Closed)
+                _db.Open();
+            var databaseName = "Timesheets";
+
+            //act
+            var conString = _db.ConnectionString;
+            var result = _db.Database;
+
+            //Assert
+            Assert.That(conString.Contains(databaseName));
+            Assert.That(databaseName, Is.EqualTo(result));
+            Assert.That(result.Length, Is.EqualTo(10));
+            Assert.That(result.Contains("Time"));
+        }
         [Test]
         public void GetHoursPerPerson_WithDate_ShouldReturnTotalHours()
         {
